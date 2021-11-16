@@ -894,3 +894,22 @@ $ bin/console make:serializer:encoder
 
 ```
 
+## `make:serializer:normalizer`: Creates a new serializer normalizer class
+
+src/Serializer/Normalizer/UserNormalizer.phpが作成された。
+```
+$ bin/console make:serializer:normalizer
+
+ Choose a class name for your normalizer (e.g. UserNormalizer):
+ > UserNormalizer
+
+ created: src/Serializer/Normalizer/UserNormalizer.php
+
+           
+  Success! 
+           
+
+ Next: Open your new serializer normalizer class and start customizing it.
+ Find the documentation at https://symfony.com/doc/current/serializer/custom_normalizer.html
+```
+
