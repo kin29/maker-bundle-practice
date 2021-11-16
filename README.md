@@ -859,3 +859,38 @@ Let's make a password reset feature!
 
 ```
 
+##  `make:serializer:encoder`: Creates a new serializer encoder class
+
+[メモ]`serializer`が必要
+
+```angular2html
+ bin/console make:serializer:encoder
+
+                                                                                                                        
+ [ERROR] Missing package: to use the make:serializer:encoder command, run:                                              
+                                                                                                                        
+         composer require serializer                                                                                    
+
+```
+
+src/Serializer/YamlEncoder.phpが作成される
+```angular2html
+$ bin/console make:serializer:encoder
+
+ Choose a class name for your encoder (e.g. YamlEncoder):
+ > YamlEncoder
+
+ Pick your format name (e.g. yaml):
+ > yaml
+
+ created: src/Serializer/YamlEncoder.php
+
+           
+  Success! 
+           
+
+ Next: Open your new serializer encoder class and start customizing it.
+ Find the documentation at http://symfony.com/doc/current/serializer/custom_encoders.html
+
+```
+
