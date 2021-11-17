@@ -913,3 +913,55 @@ $ bin/console make:serializer:normalizer
  Find the documentation at https://symfony.com/doc/current/serializer/custom_normalizer.html
 ```
 
+## `make:subscriber`:Creates a new event subscriber class
+
+src/EventSubscriber/ExceptionSubscriber.phpが作成された。
+Suggested Eventsがでてきて親切。
+
+```
+$ bin/console make:subscriber
+
+ Choose a class name for your event subscriber (e.g. ExceptionSubscriber):
+ > ExceptionSubscriber
+
+ Suggested Events:
+ * Symfony\Component\Mailer\Event\MessageEvent (Symfony\Component\Mailer\Event\MessageEvent)
+ * Symfony\Component\Messenger\Event\WorkerMessageFailedEvent (Symfony\Component\Messenger\Event\WorkerMessageFailedEvent)
+ * Symfony\Component\Messenger\Event\WorkerMessageHandledEvent (Symfony\Component\Messenger\Event\WorkerMessageHandledEvent)
+ * Symfony\Component\Messenger\Event\WorkerRunningEvent (Symfony\Component\Messenger\Event\WorkerRunningEvent)
+ * Symfony\Component\Messenger\Event\WorkerStartedEvent (Symfony\Component\Messenger\Event\WorkerStartedEvent)
+ * Symfony\Component\Security\Http\Event\CheckPassportEvent (Symfony\Component\Security\Http\Event\CheckPassportEvent)
+ * Symfony\Component\Security\Http\Event\LoginSuccessEvent (Symfony\Component\Security\Http\Event\LoginSuccessEvent)
+ * Symfony\Component\Security\Http\Event\LogoutEvent (Symfony\Component\Security\Http\Event\LogoutEvent)
+ * console.command (Symfony\Component\Console\Event\ConsoleCommandEvent)
+ * console.error (Symfony\Component\Console\Event\ConsoleErrorEvent)
+ * console.terminate (Symfony\Component\Console\Event\ConsoleTerminateEvent)
+ * debug.security.authorization.vote (Symfony\Component\Security\Core\Event\VoteEvent)
+ * kernel.controller (Symfony\Component\HttpKernel\Event\ControllerEvent)
+ * kernel.controller_arguments (Symfony\Component\HttpKernel\Event\ControllerArgumentsEvent)
+ * kernel.exception (Symfony\Component\HttpKernel\Event\ExceptionEvent)
+ * kernel.finish_request (Symfony\Component\HttpKernel\Event\FinishRequestEvent)
+ * kernel.request (Symfony\Component\HttpKernel\Event\RequestEvent)
+ * kernel.response (Symfony\Component\HttpKernel\Event\ResponseEvent)
+ * kernel.terminate (Symfony\Component\HttpKernel\Event\TerminateEvent)
+ * kernel.view (Symfony\Component\HttpKernel\Event\ViewEvent)
+ * security.authentication.failure (Symfony\Component\Security\Core\Event\AuthenticationFailureEvent)
+ * security.authentication.success (Symfony\Component\Security\Core\Event\AuthenticationEvent)
+ * security.interactive_login (Symfony\Component\Security\Http\Event\InteractiveLoginEvent)
+ * security.switch_user (Symfony\Component\Security\Http\Event\SwitchUserEvent)
+
+  What event do you want to subscribe to?:
+ > console.command
+
+ created: src/EventSubscriber/ExceptionSubscriber.php
+
+
+  Success!
+
+
+ Next: Open your new subscriber class and start customizing it.
+ Find the documentation at https://symfony.com/doc/current/event_dispatcher.html#creating-an-event-subscriber
+2021-11-17T02:34:57+00:00 [info] User Deprecated: Since symfony/security-core 5.3: The "Symfony\Component\Security\Core\Event\AuthenticationFailureEvent" class is deprecated, use "Symfony\Component\Security\Http\Event\LoginFailureEvent" with the new authenticator system instead.
+```
+
+
