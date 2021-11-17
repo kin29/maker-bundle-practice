@@ -485,7 +485,7 @@ $ bin/console make:migration
 [diff](https://github.com/kin29/maker-bundle-practice/commit/2c2e6405e2fd42628e74906e18317699bf6ad26c)
 
 こんな感じの登録フォームが簡単にできる。EntityもFormTypeもControllerもテンプレもいい感じに作ってくれる。
-<img width="379" alt="スクリーンショット 2021-11-10 17 56 37" src="https://user-images.githubusercontent.com/12015851/141081822-f39edc2a-9ecd-4518-9b41-0d2f8873d5fa.png">
+<img width="379" alt="スクリーンショット 2021-11-10 17 56 37" src="https://user-images.githubusercontent.com/12015851/142155704-c5a6f380-6990-447d-a91b-ed1a2131f20f.png">
 
 
 [メモ] Symfony\Component\Security\Core\User\UserInterfaceを実装したEntityがないとらしい。
@@ -616,7 +616,7 @@ $ bin/console make:user
 [diff](https://github.com/kin29/maker-bundle-practice/commit/fc73769296f09c181cf4f625ace5bc6463f16af7)
 
 こんな感じのフォームが簡単にできる。EntityもFormTypeもControllerもテンプレもいい感じに作ってくれる。
-<img width="391" alt="スクリーンショット 2021-11-10 18 02 12" src="https://user-images.githubusercontent.com/12015851/141082678-afc561a6-8c20-4f26-b76d-f734a13dfc35.png">
+<img width="391" alt="スクリーンショット 2021-11-10 18 02 12" src="https://user-images.githubusercontent.com/12015851/142155706-84cfbf59-e324-405a-a775-0422a434a34e.png">
 
 
 [メモ] `symfonycasts/reset-password-bundle`が必要
