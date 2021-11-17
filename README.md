@@ -1056,3 +1056,27 @@ Choose a class name for your test, like:
  Next: Open your new test class and start customizing it.
  Find the documentation at https://symfony.com/doc/current/testing.html#unit-tests
 ```
+
+## `make:validator`:Creates a new validator and constraint class
+
+以下2ファイルが作成される。
+src/Validator/EnabledValidator.php
+src/Validator/Enabled.php
+
+```angular2html
+bin/console make:validator
+
+ The name of the validator class (e.g. EnabledValidator):
+ > EnabledValidator
+
+ created: src/Validator/EnabledValidator.php
+ created: src/Validator/Enabled.php
+
+           
+  Success! 
+           
+
+ Next: Open your new constraint & validators and add your logic.
+ Find the documentation at http://symfony.com/doc/current/validation/custom_constraint.html
+```
+
