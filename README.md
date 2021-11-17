@@ -1007,3 +1007,22 @@ Choose a class name for your test, like:
  Find the documentation at https://api-platform.com/docs/distribution/testing/
 ```
 
+## `make:twig-extension`:Creates a new Twig extension class
+
+src/Twig/AppExtension.phpが作成される。
+```
+$ bin/console make:twig-extension
+
+ The name of the Twig extension class (e.g. AppExtension):
+ > AppExtension
+
+ created: src/Twig/AppExtension.php
+
+
+  Success!
+
+
+ Next: Open your new extension class and start customizing it.
+ Find the documentation at http://symfony.com/doc/current/templating/twig_extension.html
+```
+
