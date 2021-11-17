@@ -123,7 +123,7 @@ $ bin/console make:crud
                                                                                                                         
 ```
 
-entity先に作る必要がある([make:entity](https://github.com/kin29/maker-bundle-practice#makeentity-creates-or-updates-a-doctrine-entity-class-and-optionally-an-api-platform-resource))
+entityを先に作る必要がある([make:entity](https://github.com/kin29/maker-bundle-practice#makeentity-creates-or-updates-a-doctrine-entity-class-and-optionally-an-api-platform-resource))
 ```
 $ bin/console make:crud
 
@@ -139,6 +139,68 @@ $ bin/console make:crud
                                                                                                                         
 
 ```
+[diff](https://github.com/kin29/maker-bundle-practice/commit/a075e314891fa2203eb2af8e84cb4f31a401e8c9)
+```angular2html
+$ bin/console make:entity
+
+Class name of the entity to create or update (e.g. VictoriousPizza):
+> VictoriousPizza
+
+created: src/Entity/VictoriousPizza.php
+created: src/Repository/VictoriousPizzaRepository.php
+
+Entity generated! Now let's add some fields!
+You can always add more fields later manually or by re-running this command.
+
+New property name (press <return> to stop adding fields):
+  > name
+
+  Field type (enter ? to see all types) [string]:
+  >
+
+  Field length [255]:
+  >
+
+  Can this field be null in the database (nullable) (yes/no) [no]:
+  >
+
+  updated: src/Entity/VictoriousPizza.php
+
+  Add another property? Enter the property name (or press <return> to stop adding fields):
+    >
+
+
+
+    Success!
+
+
+    Next: When you're ready, create a migration with php bin/console make:migration
+
+$ bin/console make:crud
+
+    The class name of the entity to create CRUD (e.g. DeliciousPopsicle):
+    > VictoriousPizza
+
+    Choose a name for your controller class (e.g. VictoriousPizzaController) [VictoriousPizzaController]:
+    >
+
+    created: src/Controller/VictoriousPizzaController.php
+    created: src/Form/VictoriousPizzaType.php
+    created: templates/victorious_pizza/_delete_form.html.twig
+    created: templates/victorious_pizza/_form.html.twig
+    created: templates/victorious_pizza/edit.html.twig
+    created: templates/victorious_pizza/index.html.twig
+    created: templates/victorious_pizza/new.html.twig
+    created: templates/victorious_pizza/show.html.twig
+
+
+    Success!
+
+
+    Next: Check your new CRUD by going to /victorious/pizza/
+
+```
+
 
 ## `make:docker:database`: Adds a database container to your docker-compose.yaml file
 [diff](https://github.com/kin29/maker-bundle-practice/commit/6bc376d9906535f387a7ff0151f2fd018de113b1)
