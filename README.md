@@ -3,53 +3,35 @@
 
 ref: https://symfony.com/doc/current/SymfonyMakerBundle/index.html#sln
 
-# どんなことができそう？
-こん感じでいっぱいある
-```bash
-$ bin/console list make
-Symfony 5.3.10 (env: dev, debug: true)
+# どんなことができる？
+`$ bin/console list make`でmakeコマンドのリストを確認できます。
 
-Usage:
-  command [options] [arguments]
-
-Options:
-  -h, --help            Display help for the given command. When no command is given display help for the list command
-  -q, --quiet           Do not output any message
-  -V, --version         Display this application version
-      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-  -n, --no-interaction  Do not ask any interactive question
-  -e, --env=ENV         The Environment name. [default: "dev"]
-      --no-debug        Switch off debug mode.
-  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-
-Available commands for the "make" namespace:
-  make:auth                   Creates a Guard authenticator of different flavors
-  make:command                Creates a new console command class
-  make:controller             Creates a new controller class
-  make:crud                   Creates CRUD for Doctrine entity class
-  make:docker:database        Adds a database container to your docker-compose.yaml file
-  make:entity                 Creates or updates a Doctrine entity class, and optionally an API Platform resource
-  make:fixtures               Creates a new class to load Doctrine fixtures
-  make:form                   Creates a new form class
-  make:functional-test        Creates a new test class
-  make:message                Creates a new message and handler
-  make:messenger-middleware   Creates a new messenger middleware
-  make:migration              Creates a new migration based on database changes
-  make:registration-form      Creates a new registration form system
-  make:reset-password         Create controller, entity, and repositories for use with symfonycasts/reset-password-bundle
-  make:serializer:encoder     Creates a new serializer encoder class
-  make:serializer:normalizer  Creates a new serializer normalizer class
-  make:subscriber             Creates a new event subscriber class
-  make:test                   [make:unit-test|make:functional-test] Creates a new test class
-  make:twig-extension         Creates a new Twig extension class
-  make:unit-test              Creates a new test class
-  make:user                   Creates a new security user class
-  make:validator              Creates a new validator and constraint class
-  make:voter                  Creates a new security voter class
-```
+- [make:auth](https://github.com/kin29/maker-bundle-practice#makeauthcreates-a-guard-authenticator-of-different-flavors)
+- [make:command](https://github.com/kin29/maker-bundle-practice#makecommand-creates-a-new-console-command-class)
+- [make:controller](https://github.com/kin29/maker-bundle-practice#makecontroller--creates-a-new-controller-class)
+- [make:crud](https://github.com/kin29/maker-bundle-practice#makecrud-creates-crud-for-doctrine-entity-class)
+- [make:docker:database](https://github.com/kin29/maker-bundle-practice#makedockerdatabase-adds-a-database-container-to-your-docker-composeyaml-file)
+- [make:entity](https://github.com/kin29/maker-bundle-practice#makeentity-creates-or-updates-a-doctrine-entity-class-and-optionally-an-api-platform-resource)
+- [make:fixtures](https://github.com/kin29/maker-bundle-practice#makefixtures-creates-a-new-class-to-load-doctrine-fixtures)
+- [make:form](https://github.com/kin29/maker-bundle-practice#makeform-creates-a-new-form-class)
+- [make:functional-test(deprecated)](https://github.com/kin29/maker-bundle-practice#makefunctional-test-creates-a-new-test-class)
+- [make:message](https://github.com/kin29/maker-bundle-practice#makemessage-creates-a-new-message-and-handler)
+- [make:messenger-middleware](https://github.com/kin29/maker-bundle-practice#makemessenger-middleware-creates-a-new-messenger-middleware)
+- [make:migration](https://github.com/kin29/maker-bundle-practice#makemigration-creates-a-new-migration-based-on-database-changes)
+- [make:registration-form](https://github.com/kin29/maker-bundle-practice#makeregistration-form-creates-a-new-registration-form-system)
+- [make:user](https://github.com/kin29/maker-bundle-practice#makeuser-creates-a-new-security-user-class)
+- [make:reset-password](https://github.com/kin29/maker-bundle-practice#makereset-password-create-controller-entity-and-repositories-for-use-with-symfonycastsreset-password-bundle)
+- [make:serializer:encoder](https://github.com/kin29/maker-bundle-practice#makeserializerencoder-creates-a-new-serializer-encoder-class)
+- [make:serializer:normalizer](https://github.com/kin29/maker-bundle-practice#makeserializernormalizer-creates-a-new-serializer-normalizer-class)
+- [make:subscriber](https://github.com/kin29/maker-bundle-practice#makesubscribercreates-a-new-event-subscriber-class)
+- [make:test](https://github.com/kin29/maker-bundle-practice#maketestmakeunit-testmakefunctional-test-creates-a-new-test-class)
+- [make:twig-extension](https://github.com/kin29/maker-bundle-practice#maketwig-extensioncreates-a-new-twig-extension-class)
+- [make:unit-test(deprecated)](https://github.com/kin29/maker-bundle-practice#makeunit-testcreates-a-new-test-class)
+- [make:validator](https://github.com/kin29/maker-bundle-practice#makevalidatorcreates-a-new-validator-and-constraint-class)
+- [make:voter](https://github.com/kin29/maker-bundle-practice#makevotercreates-a-new-security-voter-class)
 
 ## `make:auth`:Creates a Guard authenticator of different flavors
-[メモ] `security`が必要でした。
+[メモ] `security`が必要。
 ```
 $ bin/console make:auth
 
@@ -83,97 +65,11 @@ $ bin/console make:auth
  Next:
  - Customize your new authenticator.
  
- 
- $ git diff
-diff --git a/config/packages/security.yaml b/config/packages/security.yaml
-index fc65577..f1bdd05 100644
---- a/config/packages/security.yaml
-+++ b/config/packages/security.yaml
-@@ -13,6 +13,7 @@ security:
-         main:
-             lazy: true
-             provider: users_in_memory
-+            custom_authenticator: App\Security\AppCustomAuthenticator
- 
-             # activate different ways to authenticate
-
-
-
-$ git status  //src/Security/AppCustomAuthenticatorが作成された
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   config/packages/security.yaml
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        src/Security/
-
-no changes added to commit (use "git add" and/or "git commit -a")
-
-$ git diff
-diff --git a/config/packages/security.yaml b/config/packages/security.yaml
-index fc65577..f1bdd05 100644
---- a/config/packages/security.yaml
-+++ b/config/packages/security.yaml
-@@ -13,6 +13,7 @@ security:
-         main:
-             lazy: true
-             provider: users_in_memory
-+            custom_authenticator: App\Security\AppCustomAuthenticator
-
-```
-
-```
-$ cat src/Security/AppCustomAuthenticator.php 
-<?php
-
-namespace App\Security;
-
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use Symfony\Component\Security\Http\Authenticator\AbstractAuthenticator;
-use Symfony\Component\Security\Http\Authenticator\Passport\PassportInterface;
-
-class AppCustomAuthenticator extends AbstractAuthenticator
-{
-    public function supports(Request $request): ?bool
-    {
-        // TODO: Implement supports() method.
-    }
-
-    public function authenticate(Request $request): PassportInterface
-    {
-        // TODO: Implement authenticate() method.
-    }
-
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
-    {
-        // TODO: Implement onAuthenticationSuccess() method.
-    }
-
-    public function onAuthenticationFailure(Request $request, AuthenticationException $exception): ?Response
-    {
-        // TODO: Implement onAuthenticationFailure() method.
-    }
-
-//    public function start(Request $request, AuthenticationException $authException = null): Response
-//    {
-//        /*
-//         * If you would like this class to control what happens when an anonymous user accesses a
-//         * protected page (e.g. redirect to /login), uncomment this method and make this class
-//         * implement Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface.
-//         *
-//         * For more details, see https://symfony.com/doc/current/security/experimental_authenticators.html#configuring-the-authentication-entry-point
-//         */
-//    }
-}
 ```
 
 ##  `make:command`: Creates a new console command class
+
+src/Command/DeliciousPizzaCommandが作成される。
 ```
 $ bin/console make:command
 
@@ -190,55 +86,9 @@ $ bin/console make:command
  Find the documentation at https://symfony.com/doc/current/console.html
 ```
 
-src/Command/DeliciousPizzaCommandが作成された。
-```
-<?php
-
-namespace App\Command;
-
-use Symfony\Component\Console\Attribute\AsCommand;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
-
-#[AsCommand(
-    name: 'app:delicious-pizza',
-    description: 'Add a short description for your command',
-)]
-class DeliciousPizzaCommand extends Command
-{
-    protected function configure(): void
-    {
-        $this
-            ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
-            ->addOption('option1', null, InputOption::VALUE_NONE, 'Option description')
-        ;
-    }
-
-    protected function execute(InputInterface $input, OutputInterface $output): int
-    {
-        $io = new SymfonyStyle($input, $output);
-        $arg1 = $input->getArgument('arg1');
-
-        if ($arg1) {
-            $io->note(sprintf('You passed an argument: %s', $arg1));
-        }
-
-        if ($input->getOption('option1')) {
-            // ...
-        }
-
-        $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
-
-        return Command::SUCCESS;
-    }
-}
-```
-
 ## `make:controller`:  Creates a new controller class
+
+src/Controller/GentlePopsicleControllerが作成される。
 ```
 $ bin/console make:controller
 
@@ -254,31 +104,8 @@ $ bin/console make:controller
  Next: Open your new controller class and add some pages!
 ```
 
-src/Controller/GentlePopsicleControllerが作成された
-```
-<?php
-
-namespace App\Controller;
-
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-
-class GentlePopsicleController extends AbstractController
-{
-    #[Route('/gentle/popsicle', name: 'gentle_popsicle')]
-    public function index(): Response
-    {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/GentlePopsicleController.php',
-        ]);
-    }
-}
-```
-
 ## `make:crud`: Creates CRUD for Doctrine entity class
-`form validator twig-bundle orm`が必要でした。
+`form validator twig-bundle orm`が必要。
 ```
 $ bin/console make:crud
 
@@ -288,7 +115,8 @@ $ bin/console make:crud
          composer require form validator twig-bundle orm                                                                
                                                                                                                         
 ```
-entity先に作ってないとでした(make:entity)
+
+entity先に作る必要がある([make:entity](https://github.com/kin29/maker-bundle-practice#makeentity-creates-or-updates-a-doctrine-entity-class-and-optionally-an-api-platform-resource))
 ```
 $ bin/console make:crud
 
@@ -365,7 +193,8 @@ $ bin/console make:entity
  
 ```
 
-アトリビューションで生成したいとき
+アトリビューションで生成したいときは以下に変更する。
+
 config/packages/doctrine.yaml
 ```
 doctrine:
@@ -404,33 +233,9 @@ EntityとRepositoryが生成される。
 - src/Repository/GentlePuppyRepository.php
 
 
-src/Entity/GentlePuppy
-```
-<?php
-
-namespace App\Entity;
-
-use App\Repository\GentlePuppyRepository;
-use Doctrine\ORM\Mapping as ORM;
-
-#[ORM\Entity(repositoryClass: GentlePuppyRepository::class)]
-class GentlePuppy
-{
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private $id;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-}
-```
-
 ## `make:fixtures`: Creates a new class to load Doctrine fixtures
 
-[メモ]`orm-fixtures`が必要でした。
+[メモ]`orm-fixtures`が必要。
 
 ```bash
 $ bin/console make:fixtures
@@ -461,25 +266,6 @@ $ bin/console make:fixtures
 ```
 
 src/DataFixtures/TestFixtures.phpが生成された
-```
-<?php
-
-namespace App\DataFixtures;
-
-use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Persistence\ObjectManager;
-
-class TestFixtures extends Fixture
-{
-    public function load(ObjectManager $manager): void
-    {
-        // $product = new Product();
-        // $manager->persist($product);
-
-        $manager->flush();
-    }
-}
-```
 
 ## `make:form`: Creates a new form class
 
@@ -503,37 +289,14 @@ $ bin/console make:form
 ```
 
 src/Form/DeliciousGnomeTypeが生成された。
-```
-<?php
 
-namespace App\Form;
-
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-
-class DeliciousGnomeType extends AbstractType
-{
-    public function buildForm(FormBuilderInterface $builder, array $options): void
-    {
-        $builder
-            ->add('field_name')
-        ;
-    }
-
-    public function configureOptions(OptionsResolver $resolver): void
-    {
-        $resolver->setDefaults([
-            // Configure your form options here
-        ]);
-    }
-}
-```
 
 ## `make:functional-test`: Creates a new test class
-[メモ] `make:functional-test`はdeprecatedで、`make:test`使えらしい。
-[メモ] `symfony/panther`が必要
+[メモ] 
+- `make:functional-test`はdeprecatedで、`make:test`使えらしい。
+- `symfony/panther`が必要
 
+tests/Command/DeliciousPizzaCommandTest.phpが作成される。
 ```
 $ bin/console make:functional-test
 
@@ -567,25 +330,6 @@ Choose a class name for your test, like:
 
 ```
 
-tests/Command/DeliciousPizzaCommandTest.php
-```
-<?php
-
-namespace App\Tests\Command;
-
-use Symfony\Component\Panther\PantherTestCase;
-
-class DeliciousPizzaCommandTest extends PantherTestCase
-{
-    public function testSomething(): void
-    {
-        $client = static::createPantherClient();
-        $crawler = $client->request('GET', '/');
-
-        $this->assertSelectorTextContains('h1', 'Hello World');
-    }
-}
-```
 
 ## `make:message`: Creates a new message and handler
 [メモ] `messenger`が必要
