@@ -1080,3 +1080,22 @@ bin/console make:validator
  Find the documentation at http://symfony.com/doc/current/validation/custom_constraint.html
 ```
 
+## `make:voter`:Creates a new security voter class
+
+src/Security/Voter/BlogPostVoter.phpが作成される。
+```angular2html
+ bin/console make:voter
+
+ The name of the security voter class (e.g. BlogPostVoter):
+ > BlogPostVoter
+
+ created: src/Security/Voter/BlogPostVoter.php
+
+           
+  Success! 
+           
+
+ Next: Open your voter and add your logic.
+ Find the documentation at https://symfony.com/doc/current/security/voters.html
+
+```
