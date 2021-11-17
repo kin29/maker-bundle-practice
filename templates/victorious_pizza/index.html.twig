@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VictoriousPizza index{% endblock %}
+
+{% block body %}
+    <h1>VictoriousPizza index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for victorious_pizza in victorious_pizzas %}
+            <tr>
+                <td>{{ victorious_pizza.id }}</td>
+                <td>{{ victorious_pizza.name }}</td>
+                <td>
+                    <a href="{{ path('victorious_pizza_show', {'id': victorious_pizza.id}) }}">show</a>
+                    <a href="{{ path('victorious_pizza_edit', {'id': victorious_pizza.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('victorious_pizza_new') }}">Create new</a>
+{% endblock %}

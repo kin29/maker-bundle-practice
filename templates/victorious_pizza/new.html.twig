@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New VictoriousPizza{% endblock %}
+
+{% block body %}
+    <h1>Create new VictoriousPizza</h1>
+
+    {{ include('victorious_pizza/_form.html.twig') }}
+
+    <a href="{{ path('victorious_pizza_index') }}">back to list</a>
+{% endblock %}
