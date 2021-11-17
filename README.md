@@ -1026,3 +1026,33 @@ $ bin/console make:twig-extension
  Find the documentation at http://symfony.com/doc/current/templating/twig_extension.html
 ```
 
+## `make:unit-test`:Creates a new test class
+
+deprecatedらしいです。`make:test`を使ってとのこと。
+tests/BlogPutTest.phpが作成される。
+
+```
+$ bin/console make:unit-test
+
+
+ [WARNING] The "make:unit-test" command is deprecated, use "make:test" instead.
+
+
+
+Choose a class name for your test, like:
+ * UtilTest (to create tests/UtilTest.php)
+ * Service\UtilTest (to create tests/Service/UtilTest.php)
+ * \App\Tests\Service\UtilTest (to create tests/Service/UtilTest.php)
+
+ The name of the test class (e.g. BlogPostTest):
+ > BlogPutTest
+
+ created: tests/BlogPutTest.php
+
+
+  Success!
+
+
+ Next: Open your new test class and start customizing it.
+ Find the documentation at https://symfony.com/doc/current/testing.html#unit-tests
+```
