@@ -965,3 +965,45 @@ $ bin/console make:subscriber
 ```
 
 
+## `make:test`:[make:unit-test|make:functional-test] Creates a new test class
+
+テストのタイプを聞いてくれる。
+tests/BlogPostTest.phpが作成されました。
+`ApiTestCase`を千楽して見ました。（`composer require api`が必要）
+
+```
+$ bin/console make:test
+
+ Which test type would you like?:
+  [TestCase       ] basic PHPUnit tests
+  [KernelTestCase ] basic tests that have access to Symfony services
+  [WebTestCase    ] to run browser-like scenarios, but that don't execute JavaScript code
+  [ApiTestCase    ] to run API-oriented scenarios
+  [PantherTestCase] to run e2e scenarios, using a real-browser or HTTP client and a real web server
+ > ApiTestCase
+
+
+ [WARNING] API Platform is required for this test type. Install it with
+
+           composer require api
+
+
+
+Choose a class name for your test, like:
+ * UtilTest (to create tests/UtilTest.php)
+ * Service\UtilTest (to create tests/Service/UtilTest.php)
+ * \App\Tests\Service\UtilTest (to create tests/Service/UtilTest.php)
+
+ The name of the test class (e.g. BlogPostTest):
+ > BlogPostTest
+
+ created: tests/BlogPostTest.php
+
+
+  Success!
+
+
+ Next: Open your new test class and start customizing it.
+ Find the documentation at https://api-platform.com/docs/distribution/testing/
+```
+
