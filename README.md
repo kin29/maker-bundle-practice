@@ -31,6 +31,8 @@ ref: https://symfony.com/doc/current/SymfonyMakerBundle/index.html#sln
 - [make:voter](https://github.com/kin29/maker-bundle-practice#makevotercreates-a-new-security-voter-class)
 
 ## `make:auth`:Creates a Guard authenticator of different flavors
+[diff](https://github.com/kin29/maker-bundle-practice/commit/7ac4e7a5b34b7c744bff166d826988beb8385573)
+
 [メモ] `security`が必要。
 ```
 $ bin/console make:auth
@@ -68,6 +70,8 @@ $ bin/console make:auth
 ```
 
 ##  `make:command`: Creates a new console command class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/43eedbede1b345ab17634458bf9393b78dc4b3c2)
+
 
 src/Command/DeliciousPizzaCommandが作成される。
 ```
@@ -87,6 +91,7 @@ $ bin/console make:command
 ```
 
 ## `make:controller`:  Creates a new controller class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/07684e4602da54ac36ff957ec1f6d3cb3d82c3b7)
 
 src/Controller/GentlePopsicleControllerが作成される。
 ```
@@ -105,6 +110,8 @@ $ bin/console make:controller
 ```
 
 ## `make:crud`: Creates CRUD for Doctrine entity class
+
+
 `form validator twig-bundle orm`が必要。
 ```
 $ bin/console make:crud
@@ -134,6 +141,7 @@ $ bin/console make:crud
 ```
 
 ## `make:docker:database`: Adds a database container to your docker-compose.yaml file
+[diff](https://github.com/kin29/maker-bundle-practice/commit/6bc376d9906535f387a7ff0151f2fd018de113b1)
 
 docker-compose.yml
 ```
@@ -169,6 +177,7 @@ index a80a8cf..efa3ef8 100644
 ```
 
 ## `make:entity`: Creates or updates a Doctrine entity class, and optionally an API Platform resource
+[diff(annotation)](https://github.com/kin29/maker-bundle-practice/commit/4f565609ce850c7d0555f22cf565dd07601b4404)
 ```
 $ bin/console make:entity
 
@@ -203,7 +212,7 @@ doctrine:
             App:
                 type: attribute
 ```
-
+[diff(attribute)](https://github.com/kin29/maker-bundle-practice/commit/f9cea50e60b13a30c9e91fdcf7b983cc6ea05a8b)
 ```
 $ bin/console make:entity
 
@@ -234,7 +243,8 @@ EntityとRepositoryが生成される。
 
 
 ## `make:fixtures`: Creates a new class to load Doctrine fixtures
-
+[diff](https://github.com/kin29/maker-bundle-practice/commit/6fce4697096d5cf2505ddd942f6dd3d63c5e940f)
+ 
 [メモ]`orm-fixtures`が必要。
 
 ```bash
@@ -268,7 +278,7 @@ $ bin/console make:fixtures
 src/DataFixtures/TestFixtures.phpが生成された
 
 ## `make:form`: Creates a new form class
-
+[diff](https://github.com/kin29/maker-bundle-practice/commit/f6bcc77f88ef64b9d025cf1496b8eae5e09b7965)
 ```
 $ bin/console make:form
 
@@ -292,6 +302,8 @@ src/Form/DeliciousGnomeTypeが生成された。
 
 
 ## `make:functional-test`: Creates a new test class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/0f90a025763bbbe3f3528cc2a63435d038a84af9)
+
 [メモ] 
 - `make:functional-test`はdeprecatedで、`make:test`使えらしい。
 - `symfony/panther`が必要
@@ -332,6 +344,8 @@ Choose a class name for your test, like:
 
 
 ## `make:message`: Creates a new message and handler
+[diff](https://github.com/kin29/maker-bundle-practice/commit/da2f02f99f23be8ca9c1ccdfd02d6606b2b32037)
+
 [メモ] `messenger`が必要
 
 ```
@@ -368,6 +382,8 @@ $ bin/console make:message
 ```
 
 ## `make:messenger-middleware`: Creates a new messenger middleware
+[diff](https://github.com/kin29/maker-bundle-practice/commit/cba147003f7e75d725216611eff95a3ca44bd470)
+
 ```
 $ bin/console make:messenger-middleware
 
@@ -387,7 +403,9 @@ $ bin/console make:messenger-middleware
 ```
 
 ## `make:migration`: Creates a new migration based on database changes
-さっき作ったエンティティのmigrationファイル作ってくれた。
+[diff](https://github.com/kin29/maker-bundle-practice/commit/b4dd3f4a4619fed566d41481466230dc60c34069)
+
+[make:entity](https://github.com/kin29/maker-bundle-practice#makeentity-creates-or-updates-a-doctrine-entity-class-and-optionally-an-api-platform-resource) で作ったエンティティのmigrationファイル作ってくれた。
 ```
 $ bin/console make:migration
 
@@ -402,6 +420,8 @@ $ bin/console make:migration
 ```
 
 ## `make:registration-form`: Creates a new registration form system
+[diff](https://github.com/kin29/maker-bundle-practice/commit/2c2e6405e2fd42628e74906e18317699bf6ad26c)
+
 こんな感じの登録フォームが簡単にできる。EntityもFormTypeもControllerもテンプレもいい感じに作ってくれる。
 <img width="379" alt="スクリーンショット 2021-11-10 17 56 37" src="https://user-images.githubusercontent.com/12015851/141081822-f39edc2a-9ecd-4518-9b41-0d2f8873d5fa.png">
 
@@ -497,7 +517,7 @@ $ bin/console make:registration-form
 ```
 
 ## `make:user`: Creates a new security user class
-
+[diff](https://github.com/kin29/maker-bundle-practice/commit/1e91b66e34ed7fe32431ae4ded189388804072c7)
 ```
 $ bin/console make:user
 
@@ -531,6 +551,8 @@ $ bin/console make:user
 ```
 
 ## `make:reset-password`: Create controller, entity, and repositories for use with symfonycasts/reset-password-bundle
+[diff](https://github.com/kin29/maker-bundle-practice/commit/fc73769296f09c181cf4f625ace5bc6463f16af7)
+
 こんな感じのフォームが簡単にできる。EntityもFormTypeもControllerもテンプレもいい感じに作ってくれる。
 <img width="391" alt="スクリーンショット 2021-11-10 18 02 12" src="https://user-images.githubusercontent.com/12015851/141082678-afc561a6-8c20-4f26-b76d-f734a13dfc35.png">
 
@@ -604,6 +626,7 @@ Let's make a password reset feature!
 ```
 
 ##  `make:serializer:encoder`: Creates a new serializer encoder class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/fc8b6aaf4aef0890c912f6b71257e6da59cc3230)
 
 [メモ]`serializer`が必要
 
@@ -639,7 +662,7 @@ $ bin/console make:serializer:encoder
 ```
 
 ## `make:serializer:normalizer`: Creates a new serializer normalizer class
-
+[diff](https://github.com/kin29/maker-bundle-practice/commit/9139a81f8b6dfad5475e31f49918251d9c669127)
 src/Serializer/Normalizer/UserNormalizer.phpが作成された。
 ```
 $ bin/console make:serializer:normalizer
@@ -658,6 +681,7 @@ $ bin/console make:serializer:normalizer
 ```
 
 ## `make:subscriber`:Creates a new event subscriber class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/614eeaaebf2c9a5e4e51fc8c98ff9e60b760fc7a)
 
 src/EventSubscriber/ExceptionSubscriber.phpが作成された。
 Suggested Eventsがでてきて親切。
@@ -710,6 +734,7 @@ $ bin/console make:subscriber
 
 
 ## `make:test`:[make:unit-test|make:functional-test] Creates a new test class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/0dbe3493f9aa85b5174115f37c5c2d273716ccdd)
 
 テストのタイプを聞いてくれる。
 tests/BlogPostTest.phpが作成されました。
@@ -752,6 +777,7 @@ Choose a class name for your test, like:
 ```
 
 ## `make:twig-extension`:Creates a new Twig extension class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/109d0ca1ef49ef81751f35f315eaee47c89ec9c3)
 
 src/Twig/AppExtension.phpが作成される。
 ```
@@ -771,6 +797,7 @@ $ bin/console make:twig-extension
 ```
 
 ## `make:unit-test`:Creates a new test class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/d267ba62de63cbe72ceeab87d98b48f81a4bf1cc)
 
 deprecatedらしいです。`make:test`を使ってとのこと。
 tests/BlogPutTest.phpが作成される。
@@ -802,6 +829,7 @@ Choose a class name for your test, like:
 ```
 
 ## `make:validator`:Creates a new validator and constraint class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/fa520cb7f0b909ca2c2e98005e4ca780be7c3956)
 
 以下2ファイルが作成される。
 src/Validator/EnabledValidator.php
@@ -825,6 +853,7 @@ bin/console make:validator
 ```
 
 ## `make:voter`:Creates a new security voter class
+[diff](https://github.com/kin29/maker-bundle-practice/commit/b901ccc20959028a99dcfe8260ad604a4002faab)
 
 src/Security/Voter/BlogPostVoter.phpが作成される。
 ```angular2html
