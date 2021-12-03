@@ -110,6 +110,7 @@ $ bin/console make:controller
 ```
 
 ## `make:crud`: Creates CRUD for Doctrine entity class
+<img width="393" alt="スクリーンショット 2021-12-03 17 21 41" src="https://user-images.githubusercontent.com/12015851/144569467-6eb99137-5984-47e5-a1d6-6b280a33970d.png">
 
 
 `form validator twig-bundle orm`が必要。
